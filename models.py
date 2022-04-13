@@ -13,11 +13,7 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
-
-dataset = pd.read_csv('/kaggle/input/red-wine-quality-cortez-et-al-2009/winequality-red.csv', delimiter=',')
+dataset = pd.read_csv('winequality-red.csv', delimiter=',')
 dataset_X = dataset.iloc[:, :-1]
 dataset_y = dataset['quality']
 
