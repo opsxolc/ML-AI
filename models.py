@@ -2,16 +2,11 @@ import numpy as np
 import pandas as pd
 import xgboost as xgb
 
-
 from sklearn import datasets, linear_model, metrics, tree
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.multiclass import OneVsOneClassifier, OneVsRestClassifier
 from sklearn.tree import DecisionTreeClassifier
-
-import seaborn as sns
-
-import matplotlib.pyplot as plt
 
 import os
 import warnings
@@ -27,10 +22,6 @@ dataset_X = dataset.iloc[:, :-1]
 dataset_y = dataset['quality']
 
 X_train, X_test, y_train, y_test = train_test_split(dataset_X, dataset_y, random_state=1488)
-
-# a, b = X_train.mean(), X_train.std()
-# X_train=(X_train-X_train.mean())/X_train.std()
-# X_test = (X_test - a)/b
 
 #----------------------------
 
